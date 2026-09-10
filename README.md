@@ -4,6 +4,11 @@ MyMoney is an open-source, Telegram-first personal finance assistant. It turns
 natural-language messages and receipt photos into editable, itemized financial
 transactions, then presents the same data in a Flutter dashboard.
 
+<p align=center>
+   <img src="apps.jpeg" alt="Apps Screenshot" width="300">
+   <img src="telegram_bot.jpeg" alt="Telegram Bot Screenshot" width="465">
+</p>
+
 The interesting part is not simply adding an LLM to a finance app. MyMoney is
 a reference implementation for a safer workflow around AI-extracted financial
 data:
@@ -65,9 +70,6 @@ The repository is in the v2 migration branch, `migration`.
 - Flutter Web deployment (backend production already live)
 - Supabase Storage integration for retaining original receipt images
 - A public, anonymized evaluation dataset and parser benchmark
-
-The detailed phase status is tracked in [task.md](task.md),
-[ROADMAP.md](ROADMAP.md), and [walkthrough.md](walkthrough.md).
 
 ### Production status (2026-08-28)
 
@@ -216,19 +218,7 @@ builds when evaluating package size or performance.
 - Receipt OCR has a 10 MB upload limit and returns structured data for review.
 - Do not use real financial data while evaluating an untrusted deployment.
 - Review your LLM provider's retention and training policy before sending
-   receipt images or transaction text.
-
-## Design and Engineering Notes
-
-The project uses a dusty slate-blue design system, sage income color, clay
-expense color, keyset pagination, SQL report aggregation, and eager loading of
-transaction items. See:
-
-- [ARCHITECTURE.md](ARCHITECTURE.md)
-- [DATABASE.md](DATABASE.md)
-- [CODING_RULES.md](CODING_RULES.md)
-- [DESIGN.md](DESIGN.md)
-- [REQUIREMENTS.md](REQUIREMENTS.md)
+  receipt images or transaction text.
 
 ## Contributing
 
@@ -241,10 +231,17 @@ cd ../app && flutter analyze && flutter test
 
 Please keep business logic in `backend/app/core/`, add regression tests for
 financial or parsing behavior, and do not include credentials or real user
-data in commits. A project license and contributor policy are still planned
-for the public release preparation.
+data in commits. By contributing, you agree that your contributions are
+licensed under the same terms as the project.
 
 ## License
 
-The repository does not yet declare a license. Until one is added, treat this
-as source-available code and do not assume permission to redistribute it.
+MyMoney is free software: you can redistribute it and/or modify it under the
+terms of the **GNU General Public License, version 3** as published by the Free
+Software Foundation.
+
+MyMoney is distributed in the hope that it will be useful, but **WITHOUT ANY
+WARRANTY**; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+A PARTICULAR PURPOSE. See [LICENSE](LICENSE) for the full text.
+
+Copyright (C) 2026 victoryantonio and MyMoney contributors.
