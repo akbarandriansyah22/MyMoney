@@ -23,7 +23,7 @@ services:
   tunnel:
     image: cloudflare/cloudflared:latest
     restart: unless-stopped
-    # Named tunnel with a permanent custom domain (e.g. api.mymoneyofficial.online).
+    # Named tunnel with a permanent custom domain (e.g. api.example.com).
     # Requires CLOUDFLARE_TUNNEL_TOKEN from Cloudflare Zero Trust (Networks > Tunnels).
     command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
     networks:

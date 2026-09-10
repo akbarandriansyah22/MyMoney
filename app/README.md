@@ -20,7 +20,7 @@ by design — never put secrets here):
 |---|---|---|
 | `SUPABASE_URL` | Supabase project URL | `https://YOUR_PROJECT.supabase.co` |
 | `SUPABASE_ANON_KEY` | Supabase public anon key | `YOUR_ANON_KEY` |
-| `APP_BASE_URL` | Backend REST API base URL | `https://api.mymoneyofficial.online` |
+| `APP_BASE_URL` | Backend REST API base URL | `YOUR_BASE_URL` |
 
 ## Run
 
@@ -30,7 +30,7 @@ flutter pub get
 flutter run \
   --dart-define=SUPABASE_URL=https://YOUR_PROJECT.supabase.co \
   --dart-define=SUPABASE_ANON_KEY=YOUR_ANON_KEY \
-  --dart-define=APP_BASE_URL=https://api.mymoneyofficial.online
+  --dart-define=APP_BASE_URL=https://YOUR_BACKEND_HOST
 ```
 
 For a physical Android device, `APP_BASE_URL` must be reachable from the

@@ -13,7 +13,7 @@ and versioning follows [Semantic Versioning](https://semver.org/).
 - **Filter Transaksi Kategori Transfer** — Transaksi transfer kini otomatis ditampilkan ketika akun asal (`accountId`) atau akun tujuan (`toAccountId`) dipilih pada filter akun.
 - **UX Multi-Checklist Filter Dashboard** — Menu filter akun tidak lagi tertutup otomatis saat memilih/membatalkan pilihan akun (`closeOnActivate: false`), dan toggle "Select All" kini berfungsi dengan benar.
 - **Robustness OCR Nota** — Prompt OCR Telegram ditingkatkan dengan fallback dummy item total bila baris produk buram tetapi nominal total terbaca (mencegah error "couldn't read nota").
-- **Domain Konfigurasi Produksi** — Pembaruan URL bot & auth ke domain resmi `https://mymoneyofficial.online`.
+- **Domain Konfigurasi Produksi** — Pembaruan URL bot & auth ke domain resmi.
 
 ### Changed
 - Version number: `1.2.1+5` → `1.2.2+6`.

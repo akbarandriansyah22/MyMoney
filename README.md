@@ -64,7 +64,7 @@ The repository is in the v2 migration branch, `migration`.
 
 ### Still open
 
-- Direct Android device checkpoint on Samsung S23+
+- Direct Android device checkpoint
 - iOS CI/TestFlight and external tester checkpoint
 - Widget and golden tests for the five critical screens
 - Flutter Web deployment (backend production already live)
@@ -74,7 +74,7 @@ The repository is in the v2 migration branch, `migration`.
 ### Production status (2026-08-28)
 
 - Backend live in **production mode** (`APP_ENV=production`, docs disabled,
-  CORS restricted): `https://api.mymoneyofficial.online`
+  CORS restricted)
 - Rate limiting active on all mutation endpoints; daily automated DB backups
   (`scripts/backup_db.sh` + cron) — see [backend/README.md](backend/README.md)
 - Android release APK signed with a production keystore (v1.1.0+2)
@@ -116,7 +116,7 @@ directly to Supabase.
 | AI features | Receipt OCR (vision) + natural-language transaction parsing → structured output validated with Pydantic |
 | Rate limiting | slowapi — per-IP limits on every mutation endpoint |
 | Logging | structlog — structured JSON logs |
-| Deployment | Docker Compose (backend + cloudflared tunnel) → public API at `api.mymoneyofficial.online` |
+| Deployment | Docker Compose (backend + cloudflared tunnel) → public API |
 | CI | GitHub Actions — backend (ruff, black, pytest), Flutter (analyze, test), Node (lint, typecheck) |
 | Backups | Daily `pg_dump` via cron (`scripts/backup_db.sh`, 14-file rotation) |
 

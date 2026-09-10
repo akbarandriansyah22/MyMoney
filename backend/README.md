@@ -82,7 +82,7 @@ tests/               # pytest test suite
 APP_ENV=production
 ```
 
-Verify: `curl https://api.mymoneyofficial.online/health` → `{"status":"ok","env":"production"}`.
+Verify: `curl https://YOUR_BACKEND_HOST/health` → `{"status":"ok","env":"production"}`.
 
 > ⚠️ Changing `.env` requires a **container recreate** (not just a restart),
 > because env vars are read when the container is created:
@@ -100,7 +100,7 @@ curl -s http://localhost:8000/health
 ```
 
 Architecture: `backend` (FastAPI, port 8000) + `cloudflared` (public tunnel at
-`api.mymoneyofficial.online`). Both run with `restart: unless-stopped`.
+`https://YOUR_BACKEND_HOST`). Both run with `restart: unless-stopped`.
 
 ### Database backups (MANDATORY — scheduled)
 
@@ -157,7 +157,7 @@ Exceeding the limit → `429 Too Many Requests`.
 | Variable | Description |
 |---|---|
 | `APP_ENV` | `development` / `production` |
-| `APP_BASE_URL` | Public API URL (e.g. `https://api.mymoneyofficial.online`) |
+| `APP_BASE_URL` | Public API URL (e.g. `https://YOUR_BACKEND_HOST`) |
 | `DATABASE_URL` | Supabase PostgreSQL connection string |
 | `SUPABASE_URL` / `SUPABASE_ANON_KEY` / `SUPABASE_SERVICE_ROLE_KEY` | Supabase auth & admin |
 | `LLM_PROVIDER` | `auto` / `openrouter` / `deepseek` |
