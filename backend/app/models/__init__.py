@@ -3,6 +3,7 @@
 from app.models.account import Account
 from app.models.audit_log import AuditLog
 from app.models.category import Category
+from app.models.merchant_alias import MerchantAlias
 from app.models.pending_transaction import PendingTransaction
 from app.models.processed_update import ProcessedUpdate
 from app.models.profile import Profile
@@ -20,4 +21,5 @@ __all__ = [
     "AuditLog",
     "PendingTransaction",
     "ProcessedUpdate",
+    "MerchantAlias",
 ]
